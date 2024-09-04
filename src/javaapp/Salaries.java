@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javaapp;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Asus
- */
+
 public class Salaries {
    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -73,5 +65,9 @@ public class Salaries {
         System.out.printf("Total Gross Salary: %d\n", ttal_grs);
         System.out.printf("Total Deductions: %d\n", ttal_ded);
         System.out.printf("Total Net Pay: %d\n", ttal_net);
+    }
+
+    void addEmp(int ID, String name, int rate, int hr, int ttal_duc) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

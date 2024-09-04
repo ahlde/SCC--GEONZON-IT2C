@@ -2,7 +2,7 @@ package javaapp;
 
 import java.util.Scanner;
 
-public class JavaAppC {
+public class netPay {
   
     public void getPay (){
        
