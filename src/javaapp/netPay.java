@@ -21,25 +21,26 @@ public class netPay {
         System.out.print("Rate per hour: ");
         rate= input.nextInt();
         
-        System.out.println("Hours Worked: ");
+        System.out.print("Hours Worked: ");
         hours= input.nextInt();
         
-        System.out.println("Enter total deductions: ");
+        System.out.print("Enter total deductions: ");
         ded= input.nextInt();
         
         gross =(float)rate*hours;
         netP = gross - ded;
         
-        System.out.println("(---------------------------");
-        System.out.println("(SLIP DETAILS");
-        System.out.println("----------------------------");
+        System.out.println("\n\n");
+        System.out.println("---------------------------");
+        System.out.println("       SLIP DETAILS        ");
+        System.out.println("---------------------------\n");
         
         System.out.println("Date: August 14, 2024");
         System.out.println("Name: "+name);
         System.out.println("Age: "+age);
         
         System.out.printf("Total Gross: %.2f", gross);
-        System.out.println("Total Deductions:"+ ded);
+        System.out.println("\nTotal Deductions: "+ ded);
         
         System.out.println("------------------------------");
         System.out.printf("Net Pay: %.2f", netP);

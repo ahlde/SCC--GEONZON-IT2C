@@ -13,33 +13,33 @@ public class Grade {
         int num, id, i;
         double p, m, pf, f;
         
-        System.out.println("Enter no. of Students: ");
+        System.out.print("Enter no. of Students: ");
         num = sc.nextInt();
         
-        for (i = 0; 1 < num; i++){
+        for (i = 0; i < num; i++){
             
-            System.out.println("\nEnter details of students "+(1+1)+":");
+            System.out.println("\nEnter details of students "+(i+1)+":");
             
-            System.out.println("\tID: ");
+            System.out.print("\tID: ");
             id = sc.nextInt();
             
-            System.out.println("\tName: ");
+            System.out.print("\tName: ");
             name = sc.next();
             
-            System.out.println("\tPrelim: ");
+            System.out.print("\tPrelim: ");
             p = sc.nextDouble();
             
-            System.out.println("\tMidterm: ");
+            System.out.print("\tMidterm: ");
             m = sc.nextDouble();
             
-            System.out.println("\tPrefinal: ");
+            System.out.print("\tPrefinal: ");
             pf = sc.nextDouble();
             
-            System.out.println("\tFinals: ");
+            System.out.print("\tFinals: ");
             f= sc.nextDouble();
             
-            gr[i] =new Grades();
-            gr[i].addGrades(id, name,p, m, pf, f);
+            gr[i] = new Grades();
+            gr[i].addGrades(id, name, p, m, pf, f);
         }
             
         for (i =0; i < num; i++){

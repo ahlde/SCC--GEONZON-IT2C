@@ -4,70 +4,41 @@ import java.util.Scanner;
 
 
 public class Salaries {
-   public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        
-        String[] id;
-        String[] name;
-        int[] rate;
-        int[] hr;
-        int[] ttal_duc;
 
-        System.out.print("Enter the number of employees: ");
-        int em = sc.nextInt();
+            String name;
+            int id, rate, hr, ttal_duc;
+            double gross, ttal_net, ttal_sal = 0;
 
-       
-        id = new String[em];
-        name = new String[em];
-        rate = new int[em];
-        hr = new int[em];
-        ttal_duc = new int[em];
 
-       
-        int ttal_grs = 0;
-        int ttal_ded = 0;
-        int ttal_net = 0;
+        public void addEmployee(int eID, String eName, int rt, int hour, int deduc) {
 
-        for (int i=0;i<em;i++) {
-            System.out.println("Details of Employee " + (i + 1));
-            System.out.print("ID: ");
-            id[i] = sc.next();
-            System.out.print("Name: ");
-            name[i] = sc.next();
-            System.out.print("Rate (HOUR): ");
-            rate[i] = sc.nextInt();
-            System.out.print("Hours Worked: ");
-            hr[i] = sc.nextInt();
-            System.out.print("Total Deduction: ");
-            ttal_duc[i] = sc.nextInt();
-            System.out.println();
+            this.id = eID;
+            this.name = eName;
+            this.rate = rt;
+            this.hr = hour;
+            this.ttal_duc = deduc;
 
-            
-            int grs = hr[i] * rate[i];
-            int netp = grs - ttal_duc[i];
-
-            
-            ttal_grs += grs;
-            ttal_ded += ttal_duc[i];
-            ttal_net += netp;
+            this.gross = rate*hr;
+            this.ttal_net = ((rate* hr) - ttal_duc);
         }
+    //       
+    //        System.out.println("EMP ID    Name      Rate   Hours     Gross     Deductions       Netpay");
+    //        for (int i = 0; i < em; i++) {
+    //            int grs_sal = hr[i] * rate[i];
+    //            int net_pay = grs_sal - ttal_duc[i];
+    //            System.out.printf("%-9s %-9s %-7d %-9d %-9d %-15d %-6d\n",
+    //                              id[i], name[i], rate[i], hr[i], grs_sal, ttal_duc[i], net_pay);
+    //        }
+    //        System.out.println("-----------------------------------------------------------------------------------------------");
+    //        System.out.printf("Total Gross Salary: %d\n", ttal_grs);
+    //        System.out.printf("Total Deductions: %d\n", ttal_ded);
+    //        System.out.printf("Total Net Pay: %d\n", ttal_net);
+    //    }
 
-       
-        System.out.println("EMP ID    Name      Rate   Hours     Gross     Deductions       Netpay");
-        for (int i = 0; i < em; i++) {
-            int grs_sal = hr[i] * rate[i];
-            int net_pay = grs_sal - ttal_duc[i];
-            System.out.printf("%-9s %-9s %-7d %-9d %-9d %-15d %-6d\n",
-                              id[i], name[i], rate[i], hr[i], grs_sal, ttal_duc[i], net_pay);
+   
+    public void viewEmployee(){
+
+            System.out.printf("%-8d  %-10s  %-10d  %-10d  %-10.2f  %-12d  %-10.2f\n", this.id, this.name, this.rate, this.hr, gross, this.ttal_duc, ttal_net);
         }
-        System.out.println("-----------------------------------------------------------------------------------------------");
-        System.out.printf("Total Gross Salary: %d\n", ttal_grs);
-        System.out.printf("Total Deductions: %d\n", ttal_ded);
-        System.out.printf("Total Net Pay: %d\n", ttal_net);
-    }
-
-    void addEmp(int ID, String name, int rate, int hr, int ttal_duc) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
