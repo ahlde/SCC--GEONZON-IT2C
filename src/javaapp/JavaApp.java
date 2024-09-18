@@ -49,7 +49,7 @@ public class JavaApp {
             System.out.print("Do you want to use another transaction? (Y/N): ");
             ya = sc.next();
             
-        } while(ya.equals ("Y") || ya.equals ("y");
+        }while(ya.equals ("Y") || ya.equals ("y"));
             System.out.print("Thank you for using the system");
         
           
